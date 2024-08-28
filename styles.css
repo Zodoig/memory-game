@@ -38,29 +38,28 @@
 }
 
 :root {
-  /* for the css attributes that are not part of light or dark mode */
   --default-transition: color 0.3s ease-in-out,
     background-color 0.3s ease-in-out, border-color 0.3s ease-in-out,
     fill 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .card-container {
-  perspective: 600px; /* 1000px * 0.6 */
+  perspective: 1000px; 
 }
 
 .card {
   transition: 0.6s;
   transform-style: preserve-3d;
   position: relative;
-  width: 6rem; /* 10rem * 0.6 */
-  height: 8.4rem; /* 14rem * 0.6 */
-  margin: 0.6rem; /* 1rem * 0.6 */
-  border-radius: 12px; /* 20px * 0.6 */
+  width: 6rem; 
+  height: 8.4rem; 
+  margin: 0.6rem; 
+  border-radius: 20px; 
 }
 
 .card:hover {
-  box-shadow: 6px 6px 6px rgb(218, 214, 214); /* 10px * 0.6 */
-  transform: scale(0.66); /* 1.1 * 0.6 */
+  box-shadow: 10px 10px 10px rgb(218, 214, 214);
+  transform: scale(1.1);
   cursor: pointer;
 }
 
@@ -71,9 +70,9 @@
 .front, .back {
   backface-visibility: hidden;
   position: absolute;
-  width: 60%; /* 100% * 0.6 */
-  height: 60%; /* 100% * 0.6 */
-  border-radius: 12px; /* 20px * 0.6 */
+  width: 100%; 
+  height: 100%; 
+  border-radius: 20px; 
   background: #efe;
 }
 
@@ -88,8 +87,8 @@
 
 .card-game {
   display: grid;
-  grid-template-rows: repeat(4, 1fr); /* 1fr each row */
-  grid-template-columns: repeat(6, 1fr); /* 1fr each column */
+  grid-template-rows: repeat(4, 1fr); 
+  grid-template-columns: repeat(6, 1fr); 
   margin-bottom: 0;
 }
 
@@ -100,16 +99,16 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0;
-  margin-bottom: 4.2rem; /* 7rem * 0.6 */
+  margin-bottom: 4.2rem; 
 }
 
 .header-logo {
   content: var(--logo-image);
-  height: 21rem; /* 35rem * 0.6 */
+  height: 21rem; 
 }
 
 header {
-  padding-top: 0.6rem; /* 1rem * 0.6 */
+  padding-top: 0.6rem;
   display: flex;
 }
 
@@ -121,8 +120,8 @@ main {
 }
 
 .cartoon-bear {
-  height: 15rem; /* 25rem * 0.6 */
-  margin-bottom: 2.4rem; /* 4rem * 0.6 */
+  height: 15rem; 
+  margin-bottom: 2.4rem; 
 }
 
 .bear-speech {
@@ -130,53 +129,39 @@ main {
 }
 
 .pink-bubble {
-  height: 12rem; /* 20rem * 0.6 */
-}
-
-.start-menu {
-  display: grid;
-  grid-template-rows: repeat(2, 1fr); /* 1fr each row */
-  grid-template-columns: repeat(4, 1fr); /* 1fr each column */
-}
-
-.start-card {
-  height: 11.25rem; /* 18.75rem * 0.6 */
-  width: 8.01rem; /* 13.35rem * 0.6 */
-  margin: 0.6rem; /* 1rem * 0.6 */
-  box-shadow: 6px 6px 6px rgb(218, 214, 214); /* 10px * 0.6 */
-  border-radius: 12px; /* 20px * 0.6 */
+  height: 12rem; 
 }
 
 .play-button {
-  font-size: 1.2rem; /* 2rem * 0.6 */
+  font-size: 1.2rem; 
   background-color: rgb(131, 39, 173);
   color: aliceblue;
-  border-radius: 6px; /* 10px * 0.6 */
-  padding: 0.6%; /* 1% * 0.6 */
-  margin: 3px; /* 5px * 0.6 */
+  border-radius: 6px; 
+  padding: 0.6%; 
+  margin: 3px; 
   border: 1px solid white;
-  box-shadow: 6px 6px 6px rgb(218, 214, 214); /* 10px * 0.6 */
+  box-shadow: 10px 10px 10px rgb(218, 214, 214); 
   font-family: var(--font-family);
 }
 
 .continue-button {
-  font-size: 2.4rem; /* 4rem * 0.6 */
+  font-size: 2.4rem; 
   background-color: rgb(173, 39, 55);
   color: rgb(254, 254, 254);
-  border-radius: 6px; /* 10px * 0.6 */
-  padding: 1.2%; /* 2% * 0.6 */
-  margin: 3px; /* 5px * 0.6 */
+  border-radius: 6px; 
+  padding: 1.2%; 
+  margin: 3px; 
   border: 1px solid white;
-  box-shadow: 6px 6px 6px rgb(218, 214, 214); /* 10px * 0.6 */
+  box-shadow: 10px 10px 10px rgb(218, 214, 214);
   font-family: var(--font-family);
 }
 
 .play-button:hover, .continue-button:hover {
-  transform: scale(0.66); /* 1.1 * 0.6 */
+  transform: scale(1.1);
 }
 
 h1 {
-  font-size: 3rem; /* 5rem * 0.6 */
+  font-size: 3rem;
   color: var(--msg-color);
 }
 
@@ -185,30 +170,30 @@ h1 {
 }
 
 #timerDisplay {
-  font-size: 3rem; /* 5rem * 0.6 */
+  font-size: 3rem;
   color: white;
-  margin-top: 0.6rem; /* 1rem * 0.6 */
-  padding-left: 0.6rem; /* 1rem * 0.6 */
-  padding-right: 0.6rem; /* 1rem * 0.6 */
+  margin-top: 0.6rem;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
   grid-column: span 6;
 }
 
 .end-message {
-  font-size: 3rem; /* 5rem * 0.6 */
+  font-size: 3rem;
   color: white;
 }
 
 .welcome {
-  font-size: 1.2rem; /* 2rem * 0.6 */
-  margin-right: 6rem; /* 10rem * 0.6 */
-  margin-left: 6rem; /* 10rem * 0.6 */
+  font-size: 1.2rem;
+  margin-right: 6rem; 
+  margin-left: 6rem;
   color: var(--msg-color);
   font-weight: 800;
   margin-top: 0;
 }
 
 .bigMsg {
-  font-size: 1.5rem; /* 2.5rem * 0.6 */
+  font-size: 1.5rem;
   font-weight: 900;
   color: purple;
 }
