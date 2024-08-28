@@ -1,0 +1,212 @@
+:root[data-theme="dark"] {
+    --switch-bg: #0f0f12; 
+    --axe-image: ./assets/axe.png;
+    --back-card-image: ./assets/back-card.png;
+    --candlestick-image: ./assets/candlestick.png;
+    --cleaver-image: ./assets/cleaver.png;
+    --hammer-image: ./assets/hammer.png;
+    --hex-image: ./assets/hex.png;
+    --knife-image: ./assets/knife.png;
+    --lead-pipe-image: ./assets/lead-pipe.png;
+    --logo-image: ./assets/logo.png;
+    --poison-image: ./assets/poison.png;
+    --revolver-image: ./assets/revolver.png;
+    --rope-image: ./assets/rope.png;
+    --saw-image: ./assets/saw.png;
+    --syringe-image: ./assets/syringe.png;
+    --font-family: "Jersey 10", sans-serif;
+    --msg-color: rgb(159, 42, 62);
+  }
+  :root[data-theme="light"] {
+    --switch-bg: pink;
+    --axe-image: ./assets/axe-decoy.png;
+    --back-card-image: ./assets/back-card-decoy.png;
+    --candlestick-image: ./assets/candlestick-decoy.png;
+    --cleaver-image: ./assets/cleaver-decoy.png;
+    --hammer-image: ./assets/hammer-decoy.png;
+    --hex-image: ./assets/hex-decoy.png;
+    --knife-image: ./assets/knife-decoy.png;
+    --lead-pipe-image: ./assets/lead-pipe-decoy.png;
+    --logo-image: ./assets/logo-decoy.png;
+    --poison-image: ./assets/poison-decoy.png;
+    --revolver-image: ./assets/revolver-decoy.png;
+    --rope-image: ./assets/rope-decoy.png;
+    --saw-image: ./assets/saw-decoy.png;
+    --syringe-image: ./assets/syringe-decoy.png;
+    --font-family: "Quicksand", sans-serif;
+    --msg-color: rgb(164, 83, 127);
+  }
+  
+  :root {
+    /* for the css atributes that are not part of light or dark mode */
+    --default-transition: color 0.3s ease-in-out,
+      background-color 0.3s ease-in-out, border-color 0.3s ease-in-out,
+      fill 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+
+  .card-container {
+    perspective: 1000px;
+  }
+  
+  .card {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+    width: 10rem;
+    height: 14rem;
+    margin: 1rem;
+    border-radius: 20px;
+  }
+
+  .card:hover {
+    box-shadow: 10px 10px 10px rgb(218, 214, 214);
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+  
+  .card.rotate {
+    transform: rotateY(180deg);
+  }
+  
+  .front, .back {
+    backface-visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background: #efe;
+  }
+  
+  .front {
+    z-index: 2;
+    transform: rotateY(0deg);
+  }
+  
+  .back {
+    transform: rotateY(180deg);
+  }
+  .card-game {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin-bottom: 0; 
+  }
+
+body {
+    background-color: var(--switch-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin-bottom: 7rem;
+}
+
+.header-logo {
+  content: var(--logo-image);
+  height: 30rem;
+}
+
+header {
+    padding-top: 1rem;
+    display: flex;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cartoon-bear {
+    height: 25rem;
+    margin-bottom: 4rem;
+}
+
+.bear-speech {
+    display: flex;
+}
+
+.pink-bubble {
+    height: 20rem;
+}
+
+.start-menu {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+}
+
+.start-card {
+    height: 18.75rem;
+    width: 13.35rem;
+    margin: 1rem;
+    box-shadow: 10px 10px 10px rgb(218, 214, 214);
+    border-radius: 20px;
+}
+
+.play-button {
+    font-size: 2rem;
+    background-color: rgb(131, 39, 173);
+    color: aliceblue;
+    border-radius: 10px;
+    padding: 1%;
+    margin: 5px;
+    border: 1px solid white;
+    box-shadow: 10px 10px 10px rgb(218, 214, 214);
+    font-family: var(--font-family);
+}
+
+.continue-button {
+    font-size: 4rem;
+    background-color: rgb(173, 39, 55);
+    color: rgb(254, 254, 254);
+    border-radius: 10px;
+    padding: 2%;
+    margin: 5px;
+    border: 1px solid white;
+    box-shadow: 10px 10px 10px rgb(218, 214, 214);
+    font-family: var(--font-family);
+}
+
+.play-button:hover, .continue-button:hover {
+    transform: scale(1.1);
+}
+
+h1 {
+  font-size: 5rem;
+  color: var(--msg-color);
+}
+
+* {
+  font-family: var(--font-family);
+}
+
+#timerDisplay {
+  font-size: 5rem;
+  color: white;
+  margin-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  grid-column: span 6;
+}
+
+.end-message {
+  font-size: 5rem;
+  color: white;
+}
+
+.welcome {
+  font-size: 2rem;
+  margin-right: 10rem;
+  margin-left: 10rem;
+  color: var(--msg-color);
+  font-weight: 800;
+  margin-top: 0;
+}
+.bigMsg {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: purple;
+}
