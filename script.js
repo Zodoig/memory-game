@@ -142,13 +142,13 @@ function setupGame() {
 
           const img1 = document.createElement('img');
           img1.src = './assets/evil-computer.png';
-          img1.style.width = '21.25rem';
+          img1.style.width = '15rem';
           img1.style.height = 'auto';
           img1.className = 'evil-comp';
 
           const img2 = document.createElement('img');
           img2.src = './assets/evil-speech.png';
-          img2.style.width = '21.25rem';
+          img2.style.width = '15rem';
           img2.style.height = 'auto';
           img2.className = 'evil-speech';
 
@@ -167,13 +167,13 @@ function setupGame() {
           document.querySelector("img.evil-speech").style.display = "none";
           const img3 = document.createElement('img');
           img3.src = './assets/angry-computer.png'; 
-          img3.style.width = '21.25rem';
+          img3.style.width = '15rem';
           img3.style.height = 'auto';
           img3.className = 'angry-comp';
       
           const img4 = document.createElement('img');
           img4.src = './assets/more-evil-speech.png'; 
-          img4.style.width = '21.25rem';
+          img4.style.width = '15rem';
           img4.style.height = 'auto';
           img4.className = 'more-evil-speech';
       
@@ -199,7 +199,7 @@ function setupGame() {
                 const mockImage = document.createElement('img');
                 mockImage.className = 'mock-image';
                 mockImage.src = './assets/evil-computer.png';
-                mockImage.style.height = '30rem';
+                mockImage.style.height = '21rem';
                 mockImage.style.order = '1';
                 document.querySelector('header').appendChild(mockImage);
                 
@@ -271,9 +271,9 @@ function setupGame() {
   
       const img1 = document.createElement('img');
       img1.src = success ? './assets/sad-computer.png' : './assets/mocking-computer.png';
-      img1.style.width = '21.25rem';
+      img1.style.width = '15rem';
       img1.style.height = 'auto';
-      img1.style.marginTop = '29.75rem';
+      img1.style.marginTop = '21rem';
       endScreen.appendChild(img1);
   
       const message = document.createElement('p');

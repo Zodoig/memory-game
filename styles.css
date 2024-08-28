@@ -45,22 +45,22 @@
 }
 
 .card-container {
-  perspective: 850px; /* 1000px * 0.85 */
+  perspective: 600px; /* 1000px * 0.6 */
 }
 
 .card {
   transition: 0.6s;
   transform-style: preserve-3d;
   position: relative;
-  width: 8.5rem; /* 10rem * 0.85 */
-  height: 11.9rem; /* 14rem * 0.85 */
-  margin: 0.85rem; /* 1rem * 0.85 */
-  border-radius: 17px; /* 20px * 0.85 */
+  width: 6rem; /* 10rem * 0.6 */
+  height: 8.4rem; /* 14rem * 0.6 */
+  margin: 0.6rem; /* 1rem * 0.6 */
+  border-radius: 12px; /* 20px * 0.6 */
 }
 
 .card:hover {
-  box-shadow: 8.5px 8.5px 8.5px rgb(218, 214, 214); /* 10px * 0.85 */
-  transform: scale(0.935); /* 1.1 * 0.85 */
+  box-shadow: 6px 6px 6px rgb(218, 214, 214); /* 10px * 0.6 */
+  transform: scale(0.66); /* 1.1 * 0.6 */
   cursor: pointer;
 }
 
@@ -71,9 +71,9 @@
 .front, .back {
   backface-visibility: hidden;
   position: absolute;
-  width: 85%; /* 100% * 0.85 */
-  height: 85%; /* 100% * 0.85 */
-  border-radius: 17px; /* 20px * 0.85 */
+  width: 60%; /* 100% * 0.6 */
+  height: 60%; /* 100% * 0.6 */
+  border-radius: 12px; /* 20px * 0.6 */
   background: #efe;
 }
 
@@ -100,16 +100,16 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0;
-  margin-bottom: 5.95rem; /* 7rem * 0.85 */
+  margin-bottom: 4.2rem; /* 7rem * 0.6 */
 }
 
 .header-logo {
   content: var(--logo-image);
-  height: 25.5rem; /* 30rem * 0.85 */
+  height: 21rem; /* 35rem * 0.6 */
 }
 
 header {
-  padding-top: 0.85rem; /* 1rem * 0.85 */
+  padding-top: 0.6rem; /* 1rem * 0.6 */
   display: flex;
 }
 
@@ -121,8 +121,8 @@ main {
 }
 
 .cartoon-bear {
-  height: 21.25rem; /* 25rem * 0.85 */
-  margin-bottom: 3.4rem; /* 4rem * 0.85 */
+  height: 15rem; /* 25rem * 0.6 */
+  margin-bottom: 2.4rem; /* 4rem * 0.6 */
 }
 
 .bear-speech {
@@ -130,7 +130,7 @@ main {
 }
 
 .pink-bubble {
-  height: 17rem; /* 20rem * 0.85 */
+  height: 12rem; /* 20rem * 0.6 */
 }
 
 .start-menu {
@@ -140,43 +140,43 @@ main {
 }
 
 .start-card {
-  height: 15.9rem; /* 18.75rem * 0.85 */
-  width: 11.33rem; /* 13.35rem * 0.85 */
-  margin: 0.85rem; /* 1rem * 0.85 */
-  box-shadow: 8.5px 8.5px 8.5px rgb(218, 214, 214); /* 10px * 0.85 */
-  border-radius: 17px; /* 20px * 0.85 */
+  height: 11.25rem; /* 18.75rem * 0.6 */
+  width: 8.01rem; /* 13.35rem * 0.6 */
+  margin: 0.6rem; /* 1rem * 0.6 */
+  box-shadow: 6px 6px 6px rgb(218, 214, 214); /* 10px * 0.6 */
+  border-radius: 12px; /* 20px * 0.6 */
 }
 
 .play-button {
-  font-size: 1.7rem; /* 2rem * 0.85 */
+  font-size: 1.2rem; /* 2rem * 0.6 */
   background-color: rgb(131, 39, 173);
   color: aliceblue;
-  border-radius: 8.5px; /* 10px * 0.85 */
-  padding: 0.85%; /* 1% * 0.85 */
-  margin: 4.25px; /* 5px * 0.85 */
+  border-radius: 6px; /* 10px * 0.6 */
+  padding: 0.6%; /* 1% * 0.6 */
+  margin: 3px; /* 5px * 0.6 */
   border: 1px solid white;
-  box-shadow: 8.5px 8.5px 8.5px rgb(218, 214, 214); /* 10px * 0.85 */
+  box-shadow: 6px 6px 6px rgb(218, 214, 214); /* 10px * 0.6 */
   font-family: var(--font-family);
 }
 
 .continue-button {
-  font-size: 3.4rem; /* 4rem * 0.85 */
+  font-size: 2.4rem; /* 4rem * 0.6 */
   background-color: rgb(173, 39, 55);
   color: rgb(254, 254, 254);
-  border-radius: 8.5px; /* 10px * 0.85 */
-  padding: 1.7%; /* 2% * 0.85 */
-  margin: 4.25px; /* 5px * 0.85 */
+  border-radius: 6px; /* 10px * 0.6 */
+  padding: 1.2%; /* 2% * 0.6 */
+  margin: 3px; /* 5px * 0.6 */
   border: 1px solid white;
-  box-shadow: 8.5px 8.5px 8.5px rgb(218, 214, 214); /* 10px * 0.85 */
+  box-shadow: 6px 6px 6px rgb(218, 214, 214); /* 10px * 0.6 */
   font-family: var(--font-family);
 }
 
 .play-button:hover, .continue-button:hover {
-  transform: scale(0.935); /* 1.1 * 0.85 */
+  transform: scale(0.66); /* 1.1 * 0.6 */
 }
 
 h1 {
-  font-size: 4.25rem; /* 5rem * 0.85 */
+  font-size: 3rem; /* 5rem * 0.6 */
   color: var(--msg-color);
 }
 
@@ -185,30 +185,30 @@ h1 {
 }
 
 #timerDisplay {
-  font-size: 4.25rem; /* 5rem * 0.85 */
+  font-size: 3rem; /* 5rem * 0.6 */
   color: white;
-  margin-top: 0.85rem; /* 1rem * 0.85 */
-  padding-left: 0.85rem; /* 1rem * 0.85 */
-  padding-right: 0.85rem; /* 1rem * 0.85 */
+  margin-top: 0.6rem; /* 1rem * 0.6 */
+  padding-left: 0.6rem; /* 1rem * 0.6 */
+  padding-right: 0.6rem; /* 1rem * 0.6 */
   grid-column: span 6;
 }
 
 .end-message {
-  font-size: 4.25rem; /* 5rem * 0.85 */
+  font-size: 3rem; /* 5rem * 0.6 */
   color: white;
 }
 
 .welcome {
-  font-size: 1.7rem; /* 2rem * 0.85 */
-  margin-right: 8.5rem; /* 10rem * 0.85 */
-  margin-left: 8.5rem; /* 10rem * 0.85 */
+  font-size: 1.2rem; /* 2rem * 0.6 */
+  margin-right: 6rem; /* 10rem * 0.6 */
+  margin-left: 6rem; /* 10rem * 0.6 */
   color: var(--msg-color);
   font-weight: 800;
   margin-top: 0;
 }
 
 .bigMsg {
-  font-size: 2.125rem; /* 2.5rem * 0.85 */
+  font-size: 1.5rem; /* 2.5rem * 0.6 */
   font-weight: 900;
   color: purple;
 }
