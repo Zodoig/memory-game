@@ -1,181 +1,182 @@
 :root[data-theme="dark"] {
-    --switch-bg: #0f0f12; 
-    --axe-image: ./assets/axe.png;
-    --back-card-image: ./assets/back-card.png;
-    --candlestick-image: ./assets/candlestick.png;
-    --cleaver-image: ./assets/cleaver.png;
-    --hammer-image: ./assets/hammer.png;
-    --hex-image: ./assets/hex.png;
-    --knife-image: ./assets/knife.png;
-    --lead-pipe-image: ./assets/lead-pipe.png;
-    --logo-image: ./assets/logo.png;
-    --poison-image: ./assets/poison.png;
-    --revolver-image: ./assets/revolver.png;
-    --rope-image: ./assets/rope.png;
-    --saw-image: ./assets/saw.png;
-    --syringe-image: ./assets/syringe.png;
-    --font-family: "Jersey 10", sans-serif;
-    --msg-color: rgb(159, 42, 62);
-  }
-  :root[data-theme="light"] {
-    --switch-bg: pink;
-    --axe-image: ./assets/axe-decoy.png;
-    --back-card-image: ./assets/back-card-decoy.png;
-    --candlestick-image: ./assets/candlestick-decoy.png;
-    --cleaver-image: ./assets/cleaver-decoy.png;
-    --hammer-image: ./assets/hammer-decoy.png;
-    --hex-image: ./assets/hex-decoy.png;
-    --knife-image: ./assets/knife-decoy.png;
-    --lead-pipe-image: ./assets/lead-pipe-decoy.png;
-    --logo-image: ./assets/logo-decoy.png;
-    --poison-image: ./assets/poison-decoy.png;
-    --revolver-image: ./assets/revolver-decoy.png;
-    --rope-image: ./assets/rope-decoy.png;
-    --saw-image: ./assets/saw-decoy.png;
-    --syringe-image: ./assets/syringe-decoy.png;
-    --font-family: "Quicksand", sans-serif;
-    --msg-color: rgb(164, 83, 127);
-  }
-  
-  :root {
-    /* for the css atributes that are not part of light or dark mode */
-    --default-transition: color 0.3s ease-in-out,
-      background-color 0.3s ease-in-out, border-color 0.3s ease-in-out,
-      fill 0.3s ease-in-out, transform 0.3s ease-in-out;
-  }
+  --switch-bg: #0f0f12; 
+  --axe-image: ./assets/axe.png;
+  --back-card-image: ./assets/back-card.png;
+  --candlestick-image: ./assets/candlestick.png;
+  --cleaver-image: ./assets/cleaver.png;
+  --hammer-image: ./assets/hammer.png;
+  --hex-image: ./assets/hex.png;
+  --knife-image: ./assets/knife.png;
+  --lead-pipe-image: ./assets/lead-pipe.png;
+  --logo-image: ./assets/logo.png;
+  --poison-image: ./assets/poison.png;
+  --revolver-image: ./assets/revolver.png;
+  --rope-image: ./assets/rope.png;
+  --saw-image: ./assets/saw.png;
+  --syringe-image: ./assets/syringe.png;
+  --font-family: "Jersey 10", sans-serif;
+  --msg-color: rgb(159, 42, 62);
+}
+:root[data-theme="light"] {
+  --switch-bg: pink;
+  --axe-image: ./assets/axe-decoy.png;
+  --back-card-image: ./assets/back-card-decoy.png;
+  --candlestick-image: ./assets/candlestick-decoy.png;
+  --cleaver-image: ./assets/cleaver-decoy.png;
+  --hammer-image: ./assets/hammer-decoy.png;
+  --hex-image: ./assets/hex-decoy.png;
+  --knife-image: ./assets/knife-decoy.png;
+  --lead-pipe-image: ./assets/lead-pipe-decoy.png;
+  --logo-image: ./assets/logo-decoy.png;
+  --poison-image: ./assets/poison-decoy.png;
+  --revolver-image: ./assets/revolver-decoy.png;
+  --rope-image: ./assets/rope-decoy.png;
+  --saw-image: ./assets/saw-decoy.png;
+  --syringe-image: ./assets/syringe-decoy.png;
+  --font-family: "Quicksand", sans-serif;
+  --msg-color: rgb(164, 83, 127);
+}
 
-  .card-container {
-    perspective: 1000px;
-  }
-  
-  .card {
-    transition: 0.6s;
-    transform-style: preserve-3d;
-    position: relative;
-    width: 10rem;
-    height: 14rem;
-    margin: 1rem;
-    border-radius: 20px;
-  }
+:root {
+  /* for the css attributes that are not part of light or dark mode */
+  --default-transition: color 0.3s ease-in-out,
+    background-color 0.3s ease-in-out, border-color 0.3s ease-in-out,
+    fill 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
 
-  .card:hover {
-    box-shadow: 10px 10px 10px rgb(218, 214, 214);
-    transform: scale(1.1);
-    cursor: pointer;
-  }
-  
-  .card.rotate {
-    transform: rotateY(180deg);
-  }
-  
-  .front, .back {
-    backface-visibility: hidden;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    background: #efe;
-  }
-  
-  .front {
-    z-index: 2;
-    transform: rotateY(0deg);
-  }
-  
-  .back {
-    transform: rotateY(180deg);
-  }
-  .card-game {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    margin-bottom: 0; 
-  }
+.card-container {
+  perspective: 850px; /* 1000px * 0.85 */
+}
+
+.card {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+  width: 8.5rem; /* 10rem * 0.85 */
+  height: 11.9rem; /* 14rem * 0.85 */
+  margin: 0.85rem; /* 1rem * 0.85 */
+  border-radius: 17px; /* 20px * 0.85 */
+}
+
+.card:hover {
+  box-shadow: 8.5px 8.5px 8.5px rgb(218, 214, 214); /* 10px * 0.85 */
+  transform: scale(0.935); /* 1.1 * 0.85 */
+  cursor: pointer;
+}
+
+.card.rotate {
+  transform: rotateY(180deg);
+}
+
+.front, .back {
+  backface-visibility: hidden;
+  position: absolute;
+  width: 85%; /* 100% * 0.85 */
+  height: 85%; /* 100% * 0.85 */
+  border-radius: 17px; /* 20px * 0.85 */
+  background: #efe;
+}
+
+.front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.card-game {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr); /* 1fr each row */
+  grid-template-columns: repeat(6, 1fr); /* 1fr each column */
+  margin-bottom: 0;
+}
 
 body {
-    background-color: var(--switch-bg);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    margin-bottom: 7rem;
+  background-color: var(--switch-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  margin-bottom: 5.95rem; /* 7rem * 0.85 */
 }
 
 .header-logo {
   content: var(--logo-image);
-  height: 30rem;
+  height: 25.5rem; /* 30rem * 0.85 */
 }
 
 header {
-    padding-top: 1rem;
-    display: flex;
+  padding-top: 0.85rem; /* 1rem * 0.85 */
+  display: flex;
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .cartoon-bear {
-    height: 25rem;
-    margin-bottom: 4rem;
+  height: 21.25rem; /* 25rem * 0.85 */
+  margin-bottom: 3.4rem; /* 4rem * 0.85 */
 }
 
 .bear-speech {
-    display: flex;
+  display: flex;
 }
 
 .pink-bubble {
-    height: 20rem;
+  height: 17rem; /* 20rem * 0.85 */
 }
 
 .start-menu {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr; 
+  display: grid;
+  grid-template-rows: repeat(2, 1fr); /* 1fr each row */
+  grid-template-columns: repeat(4, 1fr); /* 1fr each column */
 }
 
 .start-card {
-    height: 18.75rem;
-    width: 13.35rem;
-    margin: 1rem;
-    box-shadow: 10px 10px 10px rgb(218, 214, 214);
-    border-radius: 20px;
+  height: 15.9rem; /* 18.75rem * 0.85 */
+  width: 11.33rem; /* 13.35rem * 0.85 */
+  margin: 0.85rem; /* 1rem * 0.85 */
+  box-shadow: 8.5px 8.5px 8.5px rgb(218, 214, 214); /* 10px * 0.85 */
+  border-radius: 17px; /* 20px * 0.85 */
 }
 
 .play-button {
-    font-size: 2rem;
-    background-color: rgb(131, 39, 173);
-    color: aliceblue;
-    border-radius: 10px;
-    padding: 1%;
-    margin: 5px;
-    border: 1px solid white;
-    box-shadow: 10px 10px 10px rgb(218, 214, 214);
-    font-family: var(--font-family);
+  font-size: 1.7rem; /* 2rem * 0.85 */
+  background-color: rgb(131, 39, 173);
+  color: aliceblue;
+  border-radius: 8.5px; /* 10px * 0.85 */
+  padding: 0.85%; /* 1% * 0.85 */
+  margin: 4.25px; /* 5px * 0.85 */
+  border: 1px solid white;
+  box-shadow: 8.5px 8.5px 8.5px rgb(218, 214, 214); /* 10px * 0.85 */
+  font-family: var(--font-family);
 }
 
 .continue-button {
-    font-size: 4rem;
-    background-color: rgb(173, 39, 55);
-    color: rgb(254, 254, 254);
-    border-radius: 10px;
-    padding: 2%;
-    margin: 5px;
-    border: 1px solid white;
-    box-shadow: 10px 10px 10px rgb(218, 214, 214);
-    font-family: var(--font-family);
+  font-size: 3.4rem; /* 4rem * 0.85 */
+  background-color: rgb(173, 39, 55);
+  color: rgb(254, 254, 254);
+  border-radius: 8.5px; /* 10px * 0.85 */
+  padding: 1.7%; /* 2% * 0.85 */
+  margin: 4.25px; /* 5px * 0.85 */
+  border: 1px solid white;
+  box-shadow: 8.5px 8.5px 8.5px rgb(218, 214, 214); /* 10px * 0.85 */
+  font-family: var(--font-family);
 }
 
 .play-button:hover, .continue-button:hover {
-    transform: scale(1.1);
+  transform: scale(0.935); /* 1.1 * 0.85 */
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: 4.25rem; /* 5rem * 0.85 */
   color: var(--msg-color);
 }
 
@@ -184,29 +185,30 @@ h1 {
 }
 
 #timerDisplay {
-  font-size: 5rem;
+  font-size: 4.25rem; /* 5rem * 0.85 */
   color: white;
-  margin-top: 1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  margin-top: 0.85rem; /* 1rem * 0.85 */
+  padding-left: 0.85rem; /* 1rem * 0.85 */
+  padding-right: 0.85rem; /* 1rem * 0.85 */
   grid-column: span 6;
 }
 
 .end-message {
-  font-size: 5rem;
+  font-size: 4.25rem; /* 5rem * 0.85 */
   color: white;
 }
 
 .welcome {
-  font-size: 2rem;
-  margin-right: 10rem;
-  margin-left: 10rem;
+  font-size: 1.7rem; /* 2rem * 0.85 */
+  margin-right: 8.5rem; /* 10rem * 0.85 */
+  margin-left: 8.5rem; /* 10rem * 0.85 */
   color: var(--msg-color);
   font-weight: 800;
   margin-top: 0;
 }
+
 .bigMsg {
-  font-size: 2.5rem;
+  font-size: 2.125rem; /* 2.5rem * 0.85 */
   font-weight: 900;
   color: purple;
 }
