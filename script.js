@@ -210,8 +210,8 @@ function setupGame() {
                     const frontside = card.querySelector('.front');
                     frontside.src = frontside.src.slice(0, -10) + ".png";
         
-                    backside.src = '/assets/' + backside.src.split('/').pop(); 
-                    frontside.src = '/assets/' + frontside.src.split('/').pop();
+                    backside.src = './assets/' + backside.src.split('/').pop(); 
+                    frontside.src = './assets/' + frontside.src.split('/').pop();
                 });
                 
                 startTimer();
